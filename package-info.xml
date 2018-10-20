@@ -5,14 +5,22 @@
 	<id>Dougiefresh:IWMAB</id>
 	<name>Images with Margins and Borders</name>
 	<type>modification</type>
-	<version>1.4</version>
+	<version>1.5</version>
 
-	<install for="2.0 - 2.0.99">
+	<install for="2.0 - 2.0.13">
 		<readme parsebbc="true">readme.txt</readme>
 		<modification>install_20x.xml</modification>
 	</install>
-	<uninstall for="2.0 - 2.0.99">
+	<uninstall for="2.0 - 2.0.13">
 		<modification reverse="true">install_20x.xml</modification>
+	</uninstall>
+
+	<install for="2.0.14 - 2.0.99">
+		<readme parsebbc="true">readme.txt</readme>
+		<modification>install_2014.xml</modification>
+	</install>
+	<uninstall for="2.0.14 - 2.0.99">
+		<modification reverse="true">install_2014.xml</modification>
 	</uninstall>
 
 	<install for="2.1 Beta 1">
