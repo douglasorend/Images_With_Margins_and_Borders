@@ -3,7 +3,7 @@
 <modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
 <id>Dougiefresh:IWMAB</id>
 <name>Images with Margins and Borders</name>
-<version>1.5</version>
+<version>1.6</version>
 
 <file name="$sourcedir/Subs.php">
 	<operation>
@@ -20,7 +20,7 @@ function BBCode_Img_Params(&$message, $pos, &$parameters)
 	$replace_str = $old = '';
 	foreach ($params as $param)
 	{
-		if (strpos($param, '=') === false)
+		if (strpos($param, '=') === false && isset($order[$old]))
 			$order[$old] .= ' ' . $param;
 		else
 			$order[$old = substr($param, 0, strpos($param, '='))] = substr($param, strpos($param, '=') + 1);
