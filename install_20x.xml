@@ -3,9 +3,53 @@
 <modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
 <id>Dougiefresh:IWMAB</id>
 <name>Images with Margins and Borders</name>
-<version>1.1</version>
+<version>1.2</version>
 
 <file name="$sourcedir/Subs.php">
+	<operation>
+		<search position="after"><![CDATA[// Parse bulletin board code in a string, as well as smileys optionally.]]></search>
+		<add><![CDATA[// Determines whether the IMG tag has all the parameters to look for:
+function BBCode_Img_Params(&$message, $pos, &$parameters)
+{
+	global $context;
+
+	$match = substr($message, $pos);
+	$match = substr($match, 0, strpos($match, ']'));
+	$params = explode('|', str_replace(' ', '|', $match));
+	unset($params[0]);
+	$order = array();
+	$old = '';
+	foreach ($params as $id => $param)
+	{
+		if (strpos($param, '=') === false && !empty($old))
+		{
+			$order[$old] .= ' ' . $param;
+			continue;
+		}
+		$key = explode('=', $param);
+		if (!isset($order[$key[0]]))
+			$order[$key[0]] = $key[1];
+		$old = $key[0];
+	}
+	$out = '';
+	foreach ($parameters as $key => $ignore)
+	{
+		$out .= (isset($order[$key]) ? ' ' . $key . '=' . $order[$key] : '');
+		unset($order[$key]);
+	}
+	$message = str_replace($match, $out, $message);
+	return count($order) == 0;
+}
+
+]]></add>
+	</operation>
+	<operation>
+		<search position="after"><![CDATA[$orders = permute($preg);]]></search>
+		<add><![CDATA[if ($possible['tag'] == 'img')
+					$orders = array(BBCode_Img_Params($message, $pos1, $possible['parameters']) ? $preg : array());
+				else
+					]]></add>
+	</operation>
 	<operation>
 		<search position="replace"><![CDATA['tag' => 'img',
 				'type' => 'unparsed_content',
@@ -43,6 +87,7 @@
 			array(
 				'tag' => 'img',
 				'type' => 'unparsed_content',
+				'parameters' => array(
 					'alt' => array('optional' => true),
 					'width' => array('optional' => true, 'value' => ' width="$1"', 'match' => '(\d+)'),
 					'height' => array('optional' => true, 'value' => ' height="$1"', 'match' => '(\d+)'),
