@@ -5,7 +5,7 @@
 	<id>Dougiefresh:IWMAB</id>
 	<name>Images with Margins and Borders</name>
 	<type>modification</type>
-	<version>1.6</version>
+	<version>1.7</version>
 
 	<install for="2.0 - 2.0.13">
 		<readme parsebbc="true">readme.txt</readme>
