@@ -1,17 +1,21 @@
 [hr]
-[center][color=red][size=16pt][b]IMAGES WITH MARGINS AND BORDERS v1.0[/b][/size][/color]
+[center][color=red][size=16pt][b]IMAGES WITH MARGINS AND BORDERS v1.1[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4067]Link to Mod[/url]
 [/center]
 [hr]
 
 [color=blue][b][size=12pt][u]Introduction[/u][/size][/b][/color]
 This mod adds several parameters to the "img" tag: 
-[quote][b]margin[/b] - Margin around the image.  Expressed in pixels.
+[quote]
+[b]margin[/b] - Margin around the image.  Expressed in pixels.
 [b]margin-left[/b] - The image's left margin.  Expressed in pixels.
 [b]margin-right[/b] - The image's right margin.  Expressed in pixels.
 [b]margin-top[/b] - The image's top margin.  Expressed in pixels.
 [b]margin-bottom[/b] - The image's bottom margin.  Expressed in pixels.
-[b]border-style[/b] - Border style.  Valid answers: [b]dotted[/b], [b]dashed[/b], [b]solid[/b], [b]double[/b], [b]groove[/b], [b]ridge[/b], [b]inset[/b], [b]outset[/b]
+[/quote]
+Except for [b]border-style[/b], the border parameters are optional if borders around the image is desired:
+[quote]
+[b]border-style[/b] - [b]REQUIRED![/b] Border style.  Valid answers: [b]dotted[/b], [b]dashed[/b], [b]solid[/b], [b]double[/b], [b]groove[/b], [b]ridge[/b], [b]inset[/b], [b]outset[/b]
 [b]border-width[/b] - Border width.  Expressed in pixels.
 [b]border-color[/b] - Border color.  Expressed either as [b]#xxx[/b], [b]#xxxxxx[/b], [b]rbg(x,x,x)[/b], or [b]{text}[/b]
 [/quote]

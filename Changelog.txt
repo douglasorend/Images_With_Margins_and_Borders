@@ -1,0 +1,6 @@
+v1.1 - July 29th, 2015
+o Rewritten to make "border-style" mandatory for use with "border-width" and "border-color".
+o Added "img" tag without "border-style", "border-width", or "border-color" parameters.
+
+v1.0 - July 24th, 2015
+o Initial Release to the Public
