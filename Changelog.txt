@@ -1,3 +1,6 @@
+v1.3 - August 8th, 2015
+o Fixed the "fix parameter order" function so that it doesn't mangle the expected output.
+
 v1.2 - July 30th, 2015
 o Performance increase due to modification of parse_bbc function to deal with memory issue found.
 
