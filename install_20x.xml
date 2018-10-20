@@ -3,7 +3,7 @@
 <modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
 <id>Dougiefresh:IWMAB</id>
 <name>Images with Margins and Borders</name>
-<version>1.3</version>
+<version>1.4</version>
 
 <file name="$sourcedir/Subs.php">
 	<operation>
@@ -35,7 +35,7 @@ function BBCode_Img_Params(&$message, $pos, &$parameters)
 
 ]]></add>
 	</operation>
-	<operation>
+	<operation error="ignore">
 		<search position="after"><![CDATA[$orders = permute($preg);]]></search>
 		<add><![CDATA[if ($possible['tag'] == 'img')
 					$orders = array(BBCode_Img_Params($message, $pos1, $possible['parameters']) ? $preg : array());

@@ -1,5 +1,5 @@
 [hr]
-[center][color=red][size=16pt][b]IMAGES WITH MARGINS AND BORDERS v1.3[/b][/size][/color]
+[center][color=red][size=16pt][b]IMAGES WITH MARGINS AND BORDERS v1.4[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4067]Link to Mod[/url]
 [/center]
 [hr]
@@ -24,7 +24,9 @@ Except for [b]border-style[/b], the border parameters are optional if borders ar
 There are no admin settings to this mod.  To disable, you must uninstall this mod.
 
 [color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
-This mod was tested on SMF 2.0.10, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.
+This mod was tested on SMF 2.0.10, but should work on SMF 2.0 and up, as well as SMF 2.1 Beta 1 & 2.  SMF 1.x is not and will not be supported.
+
+SMF 2.1 Beta 2 Nightly (as of Sept 4th, 2015) has corrected the flaw reported in [url=http://www.simplemachines.org/community/index.php?topic=538611.0]REPORT: Potentially "Fatal Flaw" in SMF's bbcode parser[/url], thus the operation that calls the "fix parameter order" function is ignored for those nightlies.
 
 [color=blue][b][size=12pt][u]Changelog[/u][/size][/b][/color]
 The changelog has been removed and can be seen at [url=http://www.xptsp.com/board/index.php?topic=569.msg874#msg874]XPtsp.com[/url].

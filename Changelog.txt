@@ -1,3 +1,6 @@
+v1.4 - September 4th, 2015
+o Operation that calls "fix parameter order" function now skipped for nightly SMF 2.1 Beta 2.
+
 v1.3 - August 8th, 2015
 o Fixed the "fix parameter order" function so that it doesn't mangle the expected output.
 
